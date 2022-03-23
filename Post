@@ -1,0 +1,17 @@
+ @PostMapping("/getdata")
+    public HelloWorld senddata(@RequestBody String responsebody){
+        System.out.println(responsebody);
+        HelloWorld helloWorld = new HelloWorld();
+        helloWorld.setResponse(responsebody);
+        System.out.println(helloWorld.response);
+        return helloWorld;
+    }
+    
+ 
+ //    @PostMapping("/getdata")
+//    public ResponseEntity<HelloWorld> senddata(@RequestBody String responsebody){
+//        System.out.println(responsebody);
+//        HelloWorld helloWorld = new HelloWorld();
+//        helloWorld.setResponse(responsebody);
+//        return new ResponseEntity<HelloWorld>(helloWorld, HttpStatus.OK);
+//    }
